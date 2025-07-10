@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永远的6(8)班 - 43颗闪亮的神经</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .header {
+            background-color: #4a6ea9;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .class-photo {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .class-photo img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #4a6ea9;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .student-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a6ea9;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        .memories {
+            font-style: italic;
+            color: #666;
+            margin: 20px 0;
+        }
+        
+        /* 留言墙样式 */
+        .message-form {
+            margin-bottom: 30px;
+        }
+        
+        .message-form input, .message-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        .message-form button {
+            background-color: #4a6ea9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .message-form button:hover {
+            background-color: #3a5e99;
+        }
+        
+        .message-list {
+            margin-top: 20px;
+        }
+        
+        .message {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4a6ea9;
+        }
+        
+        .message-author {
+            font-weight: bold;
+            color: #4a6ea9;
+            margin-bottom: 5px;
+        }
+        
+        .message-content {
+            margin-bottom: 5px;
+        }
+        
+        .message-time {
+            font-size: 0.8em;
+            color: #999;
+            text-align: right;
+        }
+        
+        @media (max-width: 768px) {
+            .students-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>永远的6(8)班</h1>
+        <p>43颗闪亮的神经 · 我们的猎奇纪念册</p>
+    </div>
+    
+    <div class="container">
+        <div class="class-photo">
+            <!-- 在这里插入班级合照 -->
+            <p class="memories">这是我们最不想回忆的回忆...</p>
+        </div>
+        
+        <div class="section">
+            <h2>我们的故事</h2>
+            <!-- 在这里写下班级的故事 -->
+            <p>tip：如果你真的想要了解我们班，我建议你先去读一遍山海经，做好心理准备</p>
+            <p>相信每位同学都心里有数，我们班和九班并列全年级最猎奇的班，班上基本都是神经病，每一位同学都有着他独特的……性格，这个网站也是我熬夜写出来的，
+                头都要秃了，只为了能纪念我们班，<del>怎么说，还不把你们手上的三连拿出来</del>
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>我们的老师</h2>
+            <!-- 在这里记录老师们的信息 -->
+            <div class="teachers-list">
+                <p>语文老师：徐艳秋老师</p>
+                <p>数学老师：单文霞老师</p>
+                <p>英语老师：杨涵睿老师</p>
+                <p>体育老师：周宇豪老师</p>
+                <p>科学老师：巩睿老师</p>
+                <p>信息老师：邵琪老师</p>
+                <p>美术老师：马丽老师</p>
+                <p>音乐老师：林志文老师</p>
+                <!-- 添加更多老师 -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>42位同学</h2>
+            <!-- 在这里列出所有同学 -->
+            <div class="students-grid">
+                <div class="student-card">
+                    <h3>1号：徐志阳</h3>
+                    <p>评价：这人真没什么好说的，度数比智商高，膀胱比脑子大。组团5打一还不一定能打过，还自以为是老大</p>
+                </div>
+                <div class="student-card">
+                    <h3>2号：张乘玮</h3>
+                    <p>评价：被老师批评次数榜首，经常"带坏同学""影响班级风气"，站在抗击搞完老师最前线</p>
+                </div>
+                <div class="student-card">
+                    <h3>3号：冉怡航</h3>
+                    <p>评价：脑癌晚期，除了高丁珈谁都骂不过，骂不过就破防打人，打还打不过，血压比智商高，属于精神病院重点关照人群</p>
+                </div>
+                <div class="student-card">
+                    <h3>4号：闵昊</h3>
+                    <p>评价：川剧变脸非遗文化继承人，变脸如呼吸，前一秒：快滚啊！下一秒：我们还是朋友吗？<del>这不削能玩？</del></p>
+                </div>
+                <div class="student-card">
+                    <h3>5号：周瑜全</h3>
+                    <p>评价：有点小装，其他没啥槽点</p>
+                </div>
+                <div class="student-card">
+                    <h3>6号：何沐涵</h3>
+                    <p>评价：欺软怕硬的垃圾，除了霸凌没有擅长的事，像这种天生缺爱的孩子需要我们去枪毙（家人都被唐死了）</p>
+                </div>
+                <div class="student-card">
+                    <h3>7号：周祺昊</h3>
+                    <p>评价：同6号</p>
+                </div>
+                <div class="student-card">
+                    <h3>8号：朱逸凡/朱埔记</h3>
+                    <p>评价：长得跟鸡一样，色迷心窍</p>
+                </div>
+                <div class="student-card">
+                    <h3>9号：沙玉辰</h3>
+                    <p>评价：古希腊掌管冷笑话的神，控制伊丽莎白轰炸珍珠港，带领朱元璋偷袭麦克阿瑟</p>
+                </div>
+                <div class="student-card">
+                    <h3>10号：刘晨曦</h3>
+                    <p>评价：长得有点幽默，其他都还好（班上为数不多的正常人），被霸凌的对象</p>
+                </div>
+                <div class="student-card">
+                    <h3>11号：彭俊杰</h3>
+                    <p>评价：最乌木之人，当面一套背后一套，自以为很聪明，实则就是个脑残，唐人街孤儿院出生的唐人</p>
+                </div>
+                <div class="student-card">
+                    <h3>12号：钱梓牧</h3>
+                    <p>评价：天天装出一副可爱的样子，讨好女生，霸凌别人（他甚至觉得自己很可爱）</p>
+                </div>
+                <div class="student-card">
+                    <h3>13号：汤泽宇</h3>
+                    <p>评价：建议改名唐泽宇好了，犯贱这一块他有着绝对的话语权，又唐又贱，但是他<del>长得帅，人品又好</del></p>
+                </div>
+                <div class="student-card">
+                    <h3>14号：吴宇宸</h3>
+                    <p>评价：黑皮体育生，班上掌握猎奇词语的神，偶尔犯贱，但他犯起贱来是真贱（老师，你是不是忘了有两个人还要写检讨啊）</p>
+                </div>
+                <div class="student-card">
+                    <h3>15号：于子墨</h3>
+                    <p>评价：班上最逗比之人，游戏界的真神，脑回路猎奇，经常能说出一些令人匪夷所思的话（我嘞个猪刚塞蛋雷球阴），不要和他交朋友，会上瘾的</p>
+                </div>
+                <div class="student-card">
+                    <h3>16号：方子轩</h3>
+                    <p>评价：比唐龙还唐，人生观：能动嘴的一定要动手，进了个一中以为自己是国家主席，死装哥一枚</p>
+                </div>
+                <div class="student-card">
+                    <h3>17号：于智丞</h3>
+                    <p>评价：蹦跳猪肉，说的每一句话都会让听的人降低智商，仿佛回到了18世纪</p>
+                </div>
+                <div class="student-card">
+                    <h3>18号：邵亦楠</h3>
+                    <p>评价：魔方高手，手速最快之人，易破防，破防表现：一边哭一边说自己没哭，然后笑着打人，骂对方傻逼。疑似精神失常</p>
+                </div>
+                <div class="student-card">
+                    <h3>19号：陈欣琪</h3>
+                    <p>评价：小小的脑子，大大的肚腩，说话的语气也是相当幽默。</p>
+                </div>
+                <div class="student-card">
+                    <h3>20号：汤沐辰</h3>
+                    <p>评价：同7号</p>
+                </div>
+                <div class="student-card">
+                    <h3>21号：杨思辰</h3>
+                    <p>评价：太容易破防了，有人往他身上扔粉笔，破防；在他头上放叶子，破防；说他两句，破防……狠起来连老师都打</p>
+                </div>
+                <div class="student-card">
+                    <h3>22号：朱俊飞</h3>
+                    <p>评价：脏到我都不想评价他</p>
+                </div>
+                <div class="student-card">
+                    <h3>23号：于悦</h3>
+                    <p>评价：常年班上倒数，其他没什么槽点</p>
+                </div>
+                <div class="student-card">
+                    <h3>24号：向韵熙</h3>
+                    <p>评价：太暴力了，脑回路相当惊奇，她的脑子仿佛让我回到了中世纪</p>
+                </div>
+                <div class="student-card">
+                    <h3>25号：潘子渝</h3>
+                    <p>评价：详情请翻开你手中的山海经，翻到《东山经》，寻找一个叫合窳（hé yǔ）的东西</p>
+                </div>
+                <div class="student-card">
+                    <h3>26号：徐心</h3>
+                    <p>评价：唐龙，班上较奇葩的女生</p>
+                </div>
+                <div class="student-card">
+                    <h3>27号：姜涵洋</h3>
+                    <p>评价：同26号</p>
+                </div>
+                <div class="student-card">
+                    <h3>28号：李冰洋</h3>
+                    <p>评价：班上算是比较正常的女生了</p>
+                </div>
+                <div class="student-card">
+                    <h3>29号：苑靖涵</h3>
+                    <p>评价：建议下辈子让父母把名字取简单点</p>
+                </div>
+                <div class="student-card">
+                    <h3>30号：周煜琪</h3>
+                    <p>评价：班上最乌木的女生，又贱又唐，骂不过别人就破防，天天顶着个大亮头以为自己是白雪公主</p>
+                </div>
+                <div class="student-card">
+                    <h3>31号：毛靖晰</h3>
+                    <p>评价：黑帮老大的思维，能动嘴的一定要动手，脾气比能力大，血压比智商高</p>
+                </div>
+                <div class="student-card">
+                    <h3>32号：刘迅瑶</h3>
+                    <p>评价：过于敏感了，在你看来很正常的一句话，在她眼里就是在骂他（哭笑），可能被网暴把脑子弄坏了</p>
+                </div>
+                <div class="student-card">
+                    <h3>33号：高丁珈</h3>
+                    <p>评价：脑回路猎奇程度全班t0。平时跟个烧红的高压锅一样，一碰就炸。（对于某些同学）谨慎相处</p>
+                </div>
+                <div class="student-card">
+                    <h3>34号：陈祉含</h3>
+                    <p>评价：除了名字难找外没有任何特点，典型的路人甲</p>
+                </div>
+                <div class="student-card">
+                    <h3>35号：陈可儿</h3>
+                    <p>评价：肥</p>
+                </div>
+                <div class="student-card">
+                    <h3>36号：张艺馨</h3>
+                    <p>评价：这么多同学唯一一个可以在输入法里直接打出名字的人</p>
+                </div>
+                <div class="student-card">
+                    <h3>37号：赵梓媛</h3>
+                    <p>评价：行为动作疑似感染了埃博拉，老师们忠诚的护卫犬（3分钟班上快讯万事通）</p>
+                </div>
+                <div class="student-card">
+                    <h3>38号：刘艾希</h3>
+                    <p>评价：女生武力值top2，除了暴力没有任何特点，相当于路人乙</p>
+                </div>
+                <div class="student-card">
+                    <h3>39号：梁雨萱</h3>
+                    <p>评价：忘了:(</p>
+                </div>
+                <div class="student-card">
+                    <h3>40号：钦靖然</h3>
+                    <p>评价：你们猜我找她名字找了多久（这并不好笑）</p>
+                </div>
+                <div class="student-card">
+                    <h3>41号：盛修狄</h3>
+                    <p>评价：路人丙</p>
+                </div>
+                <div class="student-card">
+                    <h3>42号：关祉卿</h3>
+                    <p>评价：路人丁</p>
+                </div>
+                <div class="student-card">
+                    <h3>43号：陆桐语</h3>
+                    <p>评价：路人卯（好吧）</p>
+                </div>
+                <div class="student-card">
+                    <h3>结束了。</h3>
+                    <p>感谢你耐心的看玩，感谢同学们一路的陪伴（个别），我们不会散，我们只是出去转转！（tip：看到留言板了吗，上面的留言只有你自己能看到，所以……呵呵）</p>
+                </div>
+                <!-- 添加所有42位同学 -->
+                <!-- 复制上面的div并修改内容 -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>难忘的瞬间</h2>
+            <!-- 在这里记录班级的难忘时刻 -->
+            <div class="memories">
+                <p>1.于子墨单挑于*休</p>
+                <p>2.皮*究&蛋*涯，简称：皮蛋组合</p>
+                <p>3.某老师新骚扰张艺馨、高丁珈等人</p>
+                <p>其他请补充在留言墙</p>
+                <p>留言墙的内容务必截图发我</p>
+                <p>……</p>
+                <!-- 添加更多回忆 -->
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>留言墙</h2>
+            <!-- 留言表单 -->
+            <div class="message-form">
+                <input type="text" id="author" placeholder="你的名字" required>
+                <textarea id="content" rows="4" placeholder="写下你想对6(8)班说的话..." required></textarea>
+                <button onclick="addMessage()">发布留言</button>
+            </div>
+            
+            <!-- 留言列表 -->
+            <div class="message-list" id="messageList">
+                <!-- 留言将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 永远的6(8)班 | 设计：也鸽子[空空如也] | 特别感谢所有老师和同学</p>
+    </div>
+
+    <script>
+        // 页面加载时显示留言
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMessages();
+        });
+        
+        // 加载留言
+        function loadMessages() {
+            const messageList = document.getElementById('messageList');
+            messageList.innerHTML = '';
+            
+            // 从本地存储获取留言
+            let messages = JSON.parse(localStorage.getItem('class6-8-messages')) || [];
+            
+            // 按时间倒序排列
+            messages.sort((a, b) => new Date(b.time) - new Date(a.time));
+            
+            // 显示留言
+            messages.forEach(message => {
+                const messageElement = document.createElement('div');
+                messageElement.className = 'message';
+                messageElement.innerHTML = `
+                    <div class="message-author">${message.author}</div>
+                    <div class="message-content">${message.content}</div>
+                    <div class="message-time">${formatTime(message.time)}</div>
+                `;
+                messageList.appendChild(messageElement);
+            });
+        }
+        
+        // 添加新留言
+        function addMessage() {
+            const author = document.getElementById('author').value.trim();
+            const content = document.getElementById('content').value.trim();
+            
+            if (!author || !content) {
+                alert('请填写你的名字和留言内容！');
+                return;
+            }
+            
+            // 获取现有留言
+            let messages = JSON.parse(localStorage.getItem('class6-8-messages')) || [];
+            
+            // 添加新留言
+            const newMessage = {
+                author: author,
+                content: content,
+                time: new Date().toISOString()
+            };
+            
+            messages.push(newMessage);
+            
+            // 保存到本地存储
+            localStorage.setItem('class6-8-messages', JSON.stringify(messages));
+            
+            // 清空表单
+            document.getElementById('author').value = '';
+            document.getElementById('content').value = '';
+            
+            // 重新加载留言
+            loadMessages();
+        }
+        
+        // 格式化时间显示
+        function formatTime(isoString) {
+            const date = new Date(isoString);
+            return `${date.getFullYear()}-${padZero(date.getMonth() + 1)}-${padZero(date.getDate())} ${padZero(date.getHours())}:${padZero(date.getMinutes())}`;
+        }
+        
+        // 补零函数
+        function padZero(num) {
+            return num < 10 ? `0${num}` : num;
+        }
+    </script>
+</body>
+</html>
